@@ -1,0 +1,181 @@
+body{
+}
+
+/*
+	Negate Bootstrap padding-left-right 15px
+*/
+.col-condensed [class^="col-"]{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/*
+	Fixed navigation bar
+*/
+#_nav-ntubs{
+	min-height: 45px;
+	max-height: 45px;
+	height: 45px;
+	padding-bottom: 2px;
+	border-bottom: 3px solid #ccc;
+	background-image: url("../img/navi.png");
+	background-repeat: repeat-x;
+}
+
+#_nav-ntubs > .container-fluid{
+	max-width: 954px;
+	padding: 0 30px;
+}
+
+/*
+	Navigation button group
+*/
+#_nav-btn-group .btn{
+	border-radius: 0;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-family: "Myriad Pro", "Helvetica", "Verdana";
+	border-top: 0;
+	border-bottom: 0;
+	border-right: 0;
+	border-left: 2px solid #000;
+	font-weight: 400;
+	color: #E5E5E5;
+	background: none;
+	margin: 0;
+}
+
+#_nav-btn-group :last-child{
+	border-right: 2px solid #000 !important;
+}
+
+#_nav-btn-group .nav-btn-selected{
+	background-color: #000;
+}
+
+/*
+	Navigation dropdown
+*/
+#_nav-dropdown{
+	display: none;
+}
+
+#_nav-dropdown button{
+	margin: 5px 0;
+	padding: 0 20px;
+	line-height: 30px;
+	height: 30px;
+}
+
+#_nav-dropdown button, #_nav-dropdown a{
+	color: #1A1A1A;
+	font-family: "Myriad Pro", "Helvetica", "Verdana";
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 799px){
+	#_nav-btn-group{
+		display: none;
+	}
+
+	#_nav-dropdown{
+		display: block;
+	}
+}
+
+/*
+	Sub
+*/
+#_sub{
+	max-width: 1024px;
+	margin-top: 45px;
+}
+
+#_sub-bg{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	margin: -250px 0 0;
+	padding: 0;
+	height: 285px;
+	background-image: url("../img/grass.png");
+	background-position: center center;
+	background-repeat: repeat-x;
+}
+
+#_sub-btn-group{
+	margin-left: 15px;
+	min-height: 35px;
+	max-height: 50px;
+	line-height: 35px;
+}
+
+#_sub-btn-group .btn{
+	font-size: 20px;
+	font-family: "Myriad Pro", "Helvetica", "Verdana";
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
+	border-radius: 0;
+	border: 0;
+	background: none;
+	margin: 0;
+	vertical-align: top;
+}
+
+#_sub-btn-group .btn-selected{
+	height: 50px !important;
+	background: transparent url("../img/triangle.png") no-repeat center bottom;
+}
+
+#_sub-btn-dropdown{
+	display: none;
+}
+
+#_sub-btn-dropdown > *{
+	margin-left: 5px;
+}
+
+#_sub-btn-dropdown > .btn{
+	background: none;
+	color: #ccc;
+	padding: 0 12px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	background-color: rgba(221, 221, 221, 0.25);
+}
+
+#_sub-btn-dropdown > .btn:hover{
+	background-color: rgba(221, 221, 221, 0.5);
+}
+
+@media only screen and (max-width: 767px){
+	#_sub-btn-group{
+		display: none;
+	}
+
+	#_sub-btn-dropdown{
+		display: inline-block;
+	}
+}
+
+#_img-ntubs-xs{
+	display: none;
+}
+
+@media only screen and (max-width: 450px){
+	#_img-ntubs{
+		display: none;
+	}
+	#_img-ntubs-xs{
+		display: block;
+	}
+}
+
+#_body{
+	max-width: 1024px;
+}
