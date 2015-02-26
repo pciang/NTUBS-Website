@@ -42,5 +42,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Local @pciang desktop
+# Ignore psd/ locally on @pciang desktop
 psd/
+
+# Ignore .htaccess
+# since NTU does not support apache
+.htaccess
