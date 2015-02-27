@@ -43,7 +43,7 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 						?></div>
 
 						<div id="_nav-dropdown" class="dropdown pull-right">
-							<button class="btn btn-default dropdown-toggle" type="button" id="_nav-menu" data-toggle="dropdown"><?=$nav_btns[$nav_btn]?><span class="caret"></span></button>
+							<button class="btn btn-default dropdown-toggle" type="button" id="_nav-menu" data-toggle="dropdown"><?php echo $nav_btns[$nav_btn]." "; ?><span class="caret"></span></button>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="_nav-menu"><?php
 								foreach($nav_btns as $key => $page) {
 									echo
@@ -77,7 +77,7 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 					?></div>
 				<div id="_sub-btn-dropdown" class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="_sub-drop" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-th-list"></span>
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
 					<ul id="_sub-dropdown" class="dropdown-menu" role="menu" aria-labelledby="_sub-drop"><?php
 						//$counter = 0;

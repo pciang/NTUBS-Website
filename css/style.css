@@ -151,16 +151,16 @@ body{
 
 #_sub-btn-dropdown > .btn{
 	background: none;
-	color: #ccc;
+	color: #fff;
 	padding: 0 12px;
 	height: 30px;
 	line-height: 30px;
-	border: none;
-	background-color: rgba(221, 221, 221, 0.25);
+	border: 1px solid #ccc;
+	background-color: #797062;
 }
 
 #_sub-btn-dropdown > .btn:hover{
-	background-color: rgba(221, 221, 221, 0.5);
+	background-color: #948a7a;
 }
 
 @media only screen and (max-width: 767px){
