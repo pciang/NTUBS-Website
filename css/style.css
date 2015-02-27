@@ -1,4 +1,5 @@
 body{
+	font-family: "Myriad Pro", "Helvetica", "Verdana", sans-serif;
 }
 
 /*
@@ -13,13 +14,15 @@ body{
 	Fixed navigation bar
 */
 #_nav-ntubs{
-	min-height: 45px;
-	max-height: 45px;
-	height: 45px;
-	padding-bottom: 2px;
-	border-bottom: 3px solid #ccc;
-	background-image: url("../img/navi.png");
-	background-repeat: repeat-x;
+	min-height: 40px;
+	max-height: 40px;
+	height: 40px;
+	/*padding-bottom: 2px;*/
+	border-bottom: 3px solid #948a7a;
+	background: #797062;
+	/*background-image: url("../img/navi.png");
+	background-repeat: repeat-x;*/
+	box-sizing: content-box;
 }
 
 #_nav-ntubs > .container-fluid{
@@ -36,23 +39,26 @@ body{
 	height: 40px;
 	line-height: 40px;
 	font-size: 16px;
-	font-family: "Myriad Pro", "Helvetica", "Verdana";
-	border-top: 0;
+	/*border-top: 0;
 	border-bottom: 0;
 	border-right: 0;
-	border-left: 2px solid #000;
+	border-left: 2px solid #948a7a;*/
+	border: 0;
 	font-weight: 400;
-	color: #E5E5E5;
+	color: #fff;
 	background: none;
 	margin: 0;
 }
-
-#_nav-btn-group :last-child{
-	border-right: 2px solid #000 !important;
+#_nav-btn-group .btn:hover {
+	background-color: #aaa397;
 }
+/*
+#_nav-btn-group :last-child{
+	border-right: 2px solid #948a7a !important;
+}*/
 
 #_nav-btn-group .nav-btn-selected{
-	background-color: #000;
+	background-color: #948a7a;
 }
 
 /*
@@ -69,9 +75,14 @@ body{
 	height: 30px;
 }
 
-#_nav-dropdown button, #_nav-dropdown a{
-	color: #1A1A1A;
-	font-family: "Myriad Pro", "Helvetica", "Verdana";
+#_nav-dropdown button, #_nav-dropdown a, ul.dropdown-menu, #_sub-dropdown a, #_sub-dropdown button {
+	color: #fff;
+	background: #797062;
+	font-size: 16px;
+}
+#_nav-dropdown button:hover, #_nav-dropdown a:hover, #_sub-dropdown a:hover, #_sub-dropdown button:hover {
+	color: #fff;
+	background: #aaa397;
 	font-size: 16px;
 }
 
@@ -114,7 +125,6 @@ body{
 
 #_sub-btn-group .btn{
 	font-size: 20px;
-	font-family: "Myriad Pro", "Helvetica", "Verdana";
 	color: #fff;
 	height: 35px;
 	line-height: 35px;
@@ -178,4 +188,13 @@ body{
 
 #_body{
 	max-width: 1024px;
+}
+footer {
+	width: 100%;
+	margin: 15px auto 0px;
+	background-color: #797062;
+	font-size: 1em;
+	color: #FFF;
+	text-align: center;
+	padding: 8px 0px;
 }

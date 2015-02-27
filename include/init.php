@@ -1,5 +1,14 @@
 <?php
+/**
+ * ### init.php
+ * This page will be included on every page
+ */
 
+
+/**
+ * Navigation buttons, shown on every page
+ * @var array
+ */
 $nav_btns = array(
 	'home'		=> 'Home',
 	'society'	=> 'Society',
@@ -9,6 +18,10 @@ $nav_btns = array(
 	'contact'	=> 'Contact Us'
 	);
 
+/**
+ * Subnavigation buttons, shown on every page
+ * @var array
+ */
 $sub_btns = array(
 	'home' => array(
 		array('title' => 'Latest Updates', 'path' => '')
@@ -36,6 +49,5 @@ $sub_btns = array(
 		array('title' => 'Member Registration', 'path' => ''),
 		array('title' => 'Sponsorship', 'path' => '')
 		)
-	)
+	);
 
-?>
