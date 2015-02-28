@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row col-condensed">
 	<div class="col-xs-12">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
