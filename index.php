@@ -98,6 +98,11 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 			&copy; NTU Buddhist Society <?php echo date("Y"); ?>
 
 		</footer>
+		
+		<div id="_body-bg-top"></div>
+		<div id="_body-bg-top-inverse"></div>
+		<div id="_body-bg-bottom"></div>
+		<div id="_body-bg-bottom-inverse"></div>
 
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
