@@ -204,3 +204,11 @@ footer {
 	text-align: center;
 	padding: 8px 0px;
 }
+
+.carousel-inner > .item > img {
+	margin: 0 auto;
+}
+
+#_slide-ntubs {
+	background-color: #000;
+}
