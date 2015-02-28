@@ -5,7 +5,7 @@ body{
 /*
 	Negate Bootstrap padding-left-right 15px
 */
-.col-condensed [class^="col-"]{
+.col-condensed > [class^="col-"]{
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
