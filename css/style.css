@@ -1,16 +1,11 @@
-body {
+body{
 	font-family: "Myriad Pro", "Helvetica", "Verdana", sans-serif;
-
-	/*
-		Ini bahaya ga yah?
-	*/
-	position: relative;
 }
 
 /*
 	Negate Bootstrap padding-left-right 15px
 */
-.col-condensed [class^="col-"] {
+.col-condensed [class^="col-"]{
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
@@ -18,7 +13,7 @@ body {
 /*
 	Fixed navigation bar
 */
-#_nav-ntubs {
+#_nav-ntubs{
 	min-height: 40px;
 	max-height: 40px;
 	height: 40px;
@@ -30,7 +25,7 @@ body {
 	box-sizing: content-box;
 }
 
-#_nav-ntubs > .container-fluid {
+#_nav-ntubs > .container-fluid{
 	max-width: 954px;
 	padding: 0 30px;
 }
@@ -38,7 +33,7 @@ body {
 /*
 	Navigation button group
 */
-#_nav-btn-group .btn {
+#_nav-btn-group .btn{
 	border-radius: 0;
 	padding: 0 20px;
 	height: 40px;
@@ -62,18 +57,18 @@ body {
 	border-right: 2px solid #948a7a !important;
 }*/
 
-#_nav-btn-group .nav-btn-selected {
+#_nav-btn-group .nav-btn-selected{
 	background-color: #948a7a;
 }
 
 /*
 	Navigation dropdown
 */
-#_nav-dropdown {
+#_nav-dropdown{
 	display: none;
 }
 
-#_nav-dropdown button {
+#_nav-dropdown button{
 	margin: 5px 0;
 	padding: 0 20px;
 	line-height: 30px;
@@ -91,12 +86,12 @@ body {
 	font-size: 16px;
 }
 
-@media only screen and (max-width: 799px) {
-	#_nav-btn-group {
+@media only screen and (max-width: 799px){
+	#_nav-btn-group{
 		display: none;
 	}
 
-	#_nav-dropdown {
+	#_nav-dropdown{
 		display: block;
 	}
 }
@@ -104,12 +99,12 @@ body {
 /*
 	Sub
 */
-#_sub {
+#_sub{
 	max-width: 1024px;
 	margin-top: 45px;
 }
 
-#_sub-bg {
+#_sub-bg{
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -121,18 +116,18 @@ body {
 	background-repeat: repeat-x;
 }
 
-#_sub-btn-holder {
+#_sub-btn-holder{
 	min-height: 35px;
 }
 
-#_sub-btn-group {
+#_sub-btn-group{
 	margin-left: 15px;
 	min-height: 35px;
 	max-height: 50px;
 	line-height: 35px;
 }
 
-#_sub-btn-group .btn {
+#_sub-btn-group .btn{
 	font-size: 20px;
 	color: #fff;
 	height: 35px;
@@ -145,20 +140,20 @@ body {
 	vertical-align: top;
 }
 
-#_sub-btn-group .btn-selected {
+#_sub-btn-group .btn-selected{
 	height: 50px !important;
 	background: transparent url("../img/triangle.png") no-repeat center bottom;
 }
 
-#_sub-btn-dropdown {
+#_sub-btn-dropdown{
 	display: none;
 }
 
-#_sub-btn-dropdown > * {
+#_sub-btn-dropdown > *{
 	margin-left: 5px;
 }
 
-#_sub-btn-dropdown > .btn {
+#_sub-btn-dropdown > .btn{
 	background: none;
 	color: #fff;
 	padding: 0 12px;
@@ -168,34 +163,34 @@ body {
 	background-color: #797062;
 }
 
-#_sub-btn-dropdown > .btn:hover {
+#_sub-btn-dropdown > .btn:hover{
 	background-color: #948a7a;
 }
 
-@media only screen and (max-width: 767px) {
-	#_sub-btn-group {
+@media only screen and (max-width: 767px){
+	#_sub-btn-group{
 		display: none;
 	}
 
-	#_sub-btn-dropdown {
+	#_sub-btn-dropdown{
 		display: inline-block;
 	}
 }
 
-#_img-ntubs-xs {
+#_img-ntubs-xs{
 	display: none;
 }
 
-@media only screen and (max-width: 450px) {
-	#_img-ntubs {
+@media only screen and (max-width: 450px){
+	#_img-ntubs{
 		display: none;
 	}
-	#_img-ntubs-xs {
+	#_img-ntubs-xs{
 		display: block;
 	}
 }
 
-#_body {
+#_body{
 	margin-top: 15px;
 	max-width: 1024px;
 }
@@ -208,48 +203,4 @@ footer {
 	color: #FFF;
 	text-align: center;
 	padding: 8px 0px;
-}
-
-div[id|="_body-bg-top"] {
-	position: absolute;
-	left: 0;
-	top: 285px;
-	width: 100%;
-}
-
-#_body-bg-top {
-	border: none;
-	border-radius: 50px;
-	height: 100px;
-	background-color: #fff;
-	z-index: -998;
-}
-
-#_body-bg-top-inverse{
-	border: none;
-	height: 50px;
-	background-color: #797062;
-	z-index: -999;
-}
-
-div[id|="_body-bg-bottom"] {
-	position: absolute;
-	left: 0;
-	bottom: 36px;
-	width: 100%;
-}
-
-#_body-bg-bottom {
-	border: none;
-	border-radius: 50px;
-	height: 100px;
-	background-color: #fff;
-	z-index: -996;
-}
-
-#_body-bg-bottom-inverse{
-	border: none;
-	height: 50px;
-	background-color: #797062;
-	z-index: -997;
 }
