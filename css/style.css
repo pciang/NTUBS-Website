@@ -116,6 +116,10 @@ body{
 	background-repeat: repeat-x;
 }
 
+#_sub-btn-holder{
+	min-height: 35px;
+}
+
 #_sub-btn-group{
 	margin-left: 15px;
 	min-height: 35px;
@@ -187,8 +191,10 @@ body{
 }
 
 #_body{
+	margin-top: 15px;
 	max-width: 1024px;
 }
+
 footer {
 	width: 100%;
 	margin: 15px auto 0px;

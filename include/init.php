@@ -24,7 +24,7 @@ $nav_btns = array(
  */
 $sub_btns = array(
 	'home' => array(
-		array('title' => 'Latest Updates', 'path' => '')
+		array('title' => 'Latest Updates', 'path' => 'page/home.php')
 		),
 	'society' => array(
 		array('title' => 'About Us', 'path' => ''),

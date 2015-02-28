@@ -36,9 +36,9 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 						<div id="_nav-btn-group" class="btn-group pull-right"><?php
 							foreach ($nav_btns as $key => $page){
 								echo
-								"<a href=\"?page=$key\" class=\"btn btn-default" . ($key == $nav_btn ? ' nav-btn-selected' : '' ) . "\">"
-								. $page
-								. "</a>";
+									"<a href=\"?page=$key\" class=\"btn btn-default" . ($key == $nav_btn ? ' nav-btn-selected' : '' ) . "\">"
+									. $page
+									. "</a>";
 							}
 						?></div>
 
@@ -47,10 +47,9 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 							<ul class="dropdown-menu" role="menu" aria-labelledby="_nav-menu"><?php
 								foreach($nav_btns as $key => $page) {
 									echo
-									"<li role=\"presentation\">"
-									. "<a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$key\">$page</a>"
-									. "</li>";
-									//. "<li role=\"presentation\" class=\"divider\"></li>";
+										"<li role=\"presentation\">"
+										. "<a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$key\">$page</a>"
+										. "</li>";
 								}
 							?></ul>
 						</div>
@@ -66,45 +65,40 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 				</div>
 			</div>
 			<div id="_sub-bg" class="row"></div>
-			<div class="row">
-				<div id="_sub-btn-group" class="col-xs-12">
-					<?php
+			<div id="_sub-btn-holder" class="row">
+				<div id="_sub-btn-group" class="col-xs-12"><?php
 					foreach($sub_btns[$nav_btn] as $key => $sub){
 						echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">"
-						. "$sub[title]"
-						. "</a>";
+							. "$sub[title]"
+							. "</a>";
 					}
-					?></div>
+				?></div>
 				<div id="_sub-btn-dropdown" class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="_sub-drop" data-toggle="dropdown">
 						<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
 					<ul id="_sub-dropdown" class="dropdown-menu" role="menu" aria-labelledby="_sub-drop"><?php
-						//$counter = 0;
 						foreach($sub_btns[$nav_btn] as $key => $sub){
-							/*if($counter++){
-								echo
-								"<li role=\"presentation\" class=\"divider\"></li>";
-							}*/
 							echo
-							"<li role=\"presentation\">"
-							. "<a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">"
-							. "$sub[title]"
-							. "</a>"
-							. "</li>";
+								"<li role=\"presentation\">"
+								. "<a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">"
+								. "$sub[title]"
+								. "</a>"
+								. "</li>";
 						}
-						//unset($counter);
 					?></ul>
 				</div>
 			</div>
 		</div>
-		<div id="_body" class="container-fluid">
-			<div style="height:1024px; "></div>
-		</div>
+		<div id="_body" class="container-fluid"><?php
+			!empty($path = $sub_btns[$nav_btn][$sub_btn]['path']) ? include_once($path) : $path;
+		?></div>
 
 		<footer class="container-fluid">
 			&copy; NTU Buddhist Society <?php echo date("Y"); ?>
+
 		</footer>
+
 		<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</body>
