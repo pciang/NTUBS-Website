@@ -21,6 +21,7 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>NTUBS | NTU Buddhist Society</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<link rel="shortcut icon" href="img/buddhist.ico" />
@@ -30,7 +31,7 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 			<div class="container-fluid">
 				<div class="row col-condensed">
 					<div class="col-xs-3">
-						<img src="img/navi-logo.png" class="media-object" />
+						<a id="logo" href="?page=home"><img src="img/navi-logo.png" class="media-object" /></a>
 					</div>
 					<div class="col-xs-9 clearfix">
 						<div id="_nav-btn-group" class="btn-group pull-right"><?php
