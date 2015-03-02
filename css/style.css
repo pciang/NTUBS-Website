@@ -5,7 +5,7 @@ body{
 /*
 	Negate Bootstrap padding-left-right 15px
 */
-.col-condensed > [class^="col-"]{
+.col-condensed > [class*="col-"]{
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
@@ -231,4 +231,31 @@ footer {
 #_slide-ntubs > ol > li[class*="active"] {
 	border-color: #E09402;
 	background-color: #E09402;
+}
+
+#_body > .row > .page-header {
+	border-bottom: 1px solid #6B3B25;
+}
+
+/*
+	A clever workaround for :link, :hover, :active, :visited
+	http://stackoverflow.com/questions/3950322/how-to-select-all-a-pseudo-classes-in-css
+*/
+body #_body .link-wrap-img {
+	display: block;
+	color: #000;
+	text-decoration: none;
+}
+
+.link-wrap-img > .link-wrap-img-desc {
+	padding: 0 5px 5px;
+}
+
+.link-wrap-img > img {
+	padding: 5px;
+	background-color: #fff;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 0px 0px 5px #ccc;
+	margin-bottom: 20px;
 }

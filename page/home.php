@@ -13,34 +13,34 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<img src="img/slideshow.jpg" alt="Chania" />
-					<div class="carousel-caption">
+					<!--<div class="carousel-caption">
 						<h3>Chania</h3>
 						<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-					</div>
+					</div>-->
 				</div>
 
 				<div class="item">
 					<img src="img/slideshow.jpg" alt="Chania" />
-					<div class="carousel-caption">
+					<!--<div class="carousel-caption">
 						<h3>Chania</h3>
 						<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-					</div>
+					</div>-->
 				</div>
 
 				<div class="item">
 					<img src="img/slideshow.jpg" alt="Flower" />
-					<div class="carousel-caption">
+					<!--<div class="carousel-caption">
 						<h3>Flowers</h3>
 						<p>Beatiful flowers in Kolymbari, Crete.</p>
-					</div>
+					</div>-->
 				</div>
 
 				<div class="item">
 					<img src="img/slideshow.jpg" alt="Flower">
-					<div class="carousel-caption">
+					<!--<div class="carousel-caption">
 						<h3>Flowers</h3>
 						<p>Beatiful flowers in Kolymbari, Crete.</p>
-					</div>
+					</div>-->
 				</div>
 			</div>
 
@@ -56,8 +56,28 @@
 		</div>
 	</div>
 </div>
-<div class="row col-condensed">
-	<div class="col-xs-12">
-		<h2>Upcoming Events</h2>
+<div class="row">
+	<div class="page-header">
+		<h3 class="text-center">Upcoming Events<small>view all</small></h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+		<a class="link-wrap-img" href="">
+			<img class="img-responsive" src="img/event.jpg" />
+			<div class="link-wrap-img-desc">test</div>
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a class="link-wrap-img" href="">
+			<img class="img-responsive" src="img/event3.jpg" />
+			<div class="link-wrap-img-desc">test</div>
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a class="link-wrap-img" href="">
+			<img class="img-responsive" src="img/event2.jpg" />
+			<div class="link-wrap-img-desc">test</div>
+		</a>
 	</div>
 </div>
