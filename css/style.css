@@ -14,7 +14,7 @@ body{
 /*
 	footer's position is absolute, hence we need a margin
 */
-#_body .row:last-child {
+#_body > .row:last-child {
 	margin-bottom: 40px;
 }
 
