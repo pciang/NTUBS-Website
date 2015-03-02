@@ -58,26 +58,47 @@
 </div>
 <div class="row">
 	<div class="page-header">
-		<h3 class="text-center">Upcoming Events<small>view all</small></h3>
+		<h3 class="text-center">Upcoming Events</h3>
+	</div>
+</div>
+<div class="row col-equal">
+	<div class="col-sm-4">
+		<a class="link-img" href="">
+			<div class="link-img-holder">
+				<img class="img-responsive" src="img/event.jpg" />
+				<div class="link-img-popup">
+					<button>Read more</button>
+				</div>
+			</div>
+			<div class="link-img-title">NTUBS Dharma Talk: "The Path as a Human"</div>
+			<div class="link-img-desc">NTUBS Dharma Talk: "The Path as a Human"</div>
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a class="link-img" href="">
+			<div class="link-img-holder">
+				<img class="img-responsive" src="img/event3.jpg" />
+				<div class="link-img-popup">
+					<button>Read more</button>
+				</div>
+			</div>
+			<div class="link-img-title">Buddhism Awareness Week 2015</div>
+			<div class="link-img-desc">Hi NTU!</div>
+		</a>
+	</div>
+	<div class="col-sm-4">
+		<a class="link-img" href="">
+			<div class="link-img-holder">
+				<img class="img-responsive" src="img/event2.jpg" />
+				<div class="link-img-popup">
+					<button>Read more</button>
+				</div>
+			</div>
+			<div class="link-img-title">NTUBS Meditation Class I: "Basic Meditation"</div>
+			<div class="link-img-desc">Hi NTU!</div>
+		</a>
 	</div>
 </div>
 <div class="row">
-	<div class="col-sm-4">
-		<a class="link-wrap-img" href="">
-			<img class="img-responsive" src="img/event.jpg" />
-			<div class="link-wrap-img-desc">test</div>
-		</a>
-	</div>
-	<div class="col-sm-4">
-		<a class="link-wrap-img" href="">
-			<img class="img-responsive" src="img/event3.jpg" />
-			<div class="link-wrap-img-desc">test</div>
-		</a>
-	</div>
-	<div class="col-sm-4">
-		<a class="link-wrap-img" href="">
-			<img class="img-responsive" src="img/event2.jpg" />
-			<div class="link-wrap-img-desc">test</div>
-		</a>
-	</div>
+	
 </div>

@@ -5,9 +5,20 @@ body{
 /*
 	Negate Bootstrap padding-left-right 15px
 */
-.col-condensed > [class*="col-"]{
+.col-condensed > [class*="col-"] {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+}
+
+/*
+	Force all cols equal in height
+	http://stackoverflow.com/a/19695851
+*/
+.col-equal {
+	overflow: hidden !important;
+} .col-equal > [class*="col-"] {
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
 }
 
 /*
@@ -238,24 +249,99 @@ footer {
 }
 
 /*
+ * This part onward contains the CSS for image button in Upcoming Events section found in home.php
+ *
+ */
+
+/*
 	A clever workaround for :link, :hover, :active, :visited
 	http://stackoverflow.com/questions/3950322/how-to-select-all-a-pseudo-classes-in-css
 */
-body #_body .link-wrap-img {
+body .link-img {
 	display: block;
 	color: #000;
 	text-decoration: none;
 }
 
-.link-wrap-img > .link-wrap-img-desc {
+.link-img > .link-img-holder {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.link-img > .link-img-holder > .link-img-popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0);
+	transition: background-color 0.5s;
+}
+
+.link-img > .link-img-holder > .link-img-popup > button {
+	display: none;
+	
+	/*
+		Reset button's property
+	*/
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: none;
+}
+
+.link-img > .link-img-holder:hover > .link-img-popup {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.link-img > .link-img-holder:hover > .link-img-popup > button {
+	display: block;
+	box-sizing: border-box;
+
+	color: #fff;
+	border-bottom: 3px solid #C88401;
+	border-top: 3px solid #F6A201;
+	border-left: 3px solid #F6A201;
+	border-right: 3px solid #C88401;
+
+	background-color: #E09402;
+	margin: 0 auto;
+	padding: 0 auto;
+
+	width: 120px;
+	height: 35px;
+	line-height: 29px;
+	margin-top: -17px;
+	margin-left: -60px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.link-img > .link-img-title {
+	padding: 0 5px;
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.link-img > .link-img-desc {
 	padding: 0 5px 5px;
 }
 
-.link-wrap-img > img {
+.link-img > .link-img-holder > img {
 	padding: 5px;
 	background-color: #fff;
 	border: none;
 	border-radius: 2px;
 	box-shadow: 0px 0px 5px #ccc;
-	margin-bottom: 20px;
 }
+
+/*
+ * This is the end of image button part in the Upcoming Events section in home.php
+ *
+ */
