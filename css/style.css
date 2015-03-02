@@ -111,7 +111,7 @@ body{
 }
 
 /*
-	Sub
+	Subnavigation part
 */
 #_sub{
 	max-width: 1024px;
@@ -209,6 +209,11 @@ body{
 	max-width: 1024px;
 }
 
+/*
+ * Footer tag
+ *
+ */
+
 footer {
 	width: 100%;
 	margin: 15px auto 0px;
@@ -218,6 +223,11 @@ footer {
 	text-align: center;
 	padding: 8px 0px;
 }
+
+/*
+ * This part contains the modification of Bootstrap's carousel
+ *
+ */
 
 #_slide-ntubs {
 	background-color: #fff;
@@ -243,6 +253,11 @@ footer {
 	border-color: #E09402;
 	background-color: #E09402;
 }
+
+/*
+ * page-header of "Upcoming Events" in home.php
+ *
+ */
 
 #_body > .row > .page-header {
 	border-bottom: 1px solid #6B3B25;
