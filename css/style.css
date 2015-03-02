@@ -66,10 +66,12 @@ body{
 #logo {
 	display: inline-block;
 }
+
 /*
 #_nav-btn-group :last-child{
 	border-right: 2px solid #948a7a !important;
-}*/
+}
+*/
 
 #_nav-btn-group .nav-btn-selected{
 	background-color: #948a7a;
@@ -255,15 +257,6 @@ footer {
 }
 
 /*
- * page-header of "Upcoming Events" in home.php
- *
- */
-
-#_body > .row > .page-header {
-	border-bottom: 1px solid #6B3B25;
-}
-
-/*
  * This part onward contains the CSS for image button in Upcoming Events section found in home.php
  *
  */
@@ -360,3 +353,10 @@ body .link-img {
  * This is the end of image button part in the Upcoming Events section in home.php
  *
  */
+
+ /*
+ 	Add border-bottom to any element
+ */
+.border-bottom {
+	border-bottom: 1px solid #6B3B25;
+}
