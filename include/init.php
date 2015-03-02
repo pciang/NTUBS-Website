@@ -27,9 +27,9 @@ $sub_btns = array(
 		array('title' => 'Latest Updates', 'path' => 'page/home.php')
 		),
 	'society' => array(
-		array('title' => 'About Us', 'path' => ''),
+		array('title' => 'About Us', 'path' => 'page/about.php'),
 		array('title' => 'Our History', 'path' => ''),
-		array('title' => 'Advisor and Patron', 'path' => ''),
+		array('title' => 'Advisor and Patron', 'path' => 'page/advisor.php'),
 		array('title' => 'Committees', 'path' => '')
 		),
 	'event' => array(

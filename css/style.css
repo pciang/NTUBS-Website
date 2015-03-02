@@ -360,3 +360,21 @@ body .link-img {
 .border-bottom {
 	border-bottom: 1px solid #6B3B25;
 }
+
+
+#advisor-table {
+	border: 1px solid #000;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+#advisor-table td:first-child {
+	background-color: #797062;
+	color: #fff;
+}
+
+#advisor-table td {
+	border: 1px solid #000;
+}
+
+
