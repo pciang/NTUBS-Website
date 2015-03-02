@@ -1,5 +1,21 @@
+/*
+	This is required for footer to work
+*/
+html{
+	position: relative;
+	min-height: 100%;
+}
+
 body{
 	font-family: "Lato", sans-serif;
+	margin-bottom: 36px;
+}
+
+/*
+	footer's position is absolute, hence we need a margin
+*/
+#_body .row:last-child {
+	margin-bottom: 40px;
 }
 
 /*
@@ -60,9 +76,11 @@ body{
 	background: none;
 	margin: 0;
 }
+
 #_nav-btn-group .btn:hover {
 	background-color: #aaa397;
 }
+
 #logo {
 	display: inline-block;
 }
@@ -218,12 +236,16 @@ body{
 
 footer {
 	width: 100%;
-	margin: 15px auto 0px;
+	/* margin: 15px auto 0px; */
 	background-color: #797062;
 	font-size: 1em;
 	color: #FFF;
 	text-align: center;
 	padding: 8px 0px;
+
+	position: absolute;
+	bottom: 0;
+	height: 36px;
 }
 
 /*
@@ -361,7 +383,9 @@ body .link-img {
 	border-bottom: 1px solid #6B3B25;
 }
 
-
+/*
+	Society > Advisor and Patron
+*/
 #advisor-table {
 	border: 1px solid #000;
 	border-collapse: separate;
@@ -376,5 +400,4 @@ body .link-img {
 #advisor-table td {
 	border: 1px solid #000;
 }
-
 
