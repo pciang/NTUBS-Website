@@ -56,3 +56,8 @@
 		</div>
 	</div>
 </div>
+<div class="row col-condensed">
+	<div class="col-xs-12">
+		<h2>Upcoming Events</h2>
+	</div>
+</div>

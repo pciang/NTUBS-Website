@@ -193,7 +193,7 @@ body{
 	}
 }
 
-#_body{
+#_body {
 	margin-top: 15px;
 	max-width: 1024px;
 }
@@ -208,10 +208,27 @@ footer {
 	padding: 8px 0px;
 }
 
-.carousel-inner > .item > img {
-	margin: 0 auto;
+#_slide-ntubs {
+	background-color: #fff;
+	margin-bottom: 20px;
 }
 
-#_slide-ntubs {
-	background-color: #000;
+#_slide-ntubs div[class*="item"] > img {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#_slide-ntubs > ol {
+	bottom: -20px;
+	margin-bottom: 0;
+}
+
+#_slide-ntubs > ol > li {
+	border-color: #62493D;
+	background-color: #62493D;
+}
+
+#_slide-ntubs > ol > li[class*="active"] {
+	border-color: #E09402;
+	background-color: #E09402;
 }
