@@ -21,10 +21,14 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>NTUBS | NTU Buddhist Society</title>
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+		--><link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 		<link rel="shortcut icon" href="img/buddhist.ico" />
+
+		<?php
+			include_once "local_font.php";
+		?>
 	</head>
 	<body>
 		<nav id="_nav-ntubs" class="navbar navbar-fixed-top">
