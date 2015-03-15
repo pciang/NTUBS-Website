@@ -61,11 +61,11 @@
 		<h2 class="text-center">Upcoming Events</h3>
 	</div>
 </div>
-<div class="row">
+<div id="event-list" class="row">
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
-				<img class="img-responsive" src="img/event.jpg" />
+				<img class="img-responsive center-block" src="img/event.jpg" />
 				<div class="link-img-popup">
 					<button>Read more</button>
 				</div>
@@ -77,7 +77,7 @@
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
-				<img class="img-responsive" src="img/event3.jpg" />
+				<img class="img-responsive center-block" src="img/event3.jpg" />
 				<div class="link-img-popup">
 					<button>Read more</button>
 				</div>
@@ -89,7 +89,7 @@
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
-				<img class="img-responsive" src="img/event2.jpg" />
+				<img class="img-responsive center-block" src="img/event2.jpg" />
 				<div class="link-img-popup">
 					<button>Read more</button>
 				</div>

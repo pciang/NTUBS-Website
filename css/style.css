@@ -401,3 +401,8 @@ body .link-img {
 	border: 1px solid #000;
 }
 
+@media screen and (max-width: 767px) {
+	#event-list > div[class*="col-"] {
+		padding-bottom: 75px;
+	}
+}

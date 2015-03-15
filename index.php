@@ -27,7 +27,7 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(
 		<link rel="shortcut icon" href="img/buddhist.ico" />
 
 		<?php
-			include_once "local_font.php";
+			include_once "include/local_font.php";
 		?>
 	</head>
 	<body>
