@@ -61,7 +61,7 @@
 		<h2 class="text-center">Upcoming Events</h3>
 	</div>
 </div>
-<div id="event-list" class="row">
+<div id="event-list-container" class="row">
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
@@ -101,13 +101,27 @@
 </div>
 <div class="row">
 	<div class="col-sm-4">
-		<h3 class="border-bottom">Recent Post</h3>
-		<p>List of recent posts.</p>
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="border-bottom">Recent Post</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">List of recent posts.</div>
+		</div>
 	</div>
 	<div class="col-sm-8">
-		<h3 class="border-bottom">About NTU Buddhist Society</h3>
-		<p>Nanyang Technological University Buddhist Society is a non-sectarian Buddhist society which provides various Dhamma learning experience suitable for NTU community.It envisions propagating the Dhamma and at the same time encouraging spiritual development.</p>
-		<p>Walk the journey together with us to learn the noble knowledge, to practice the wholesome actions, to realize the potential and to share the benefits with all beings.</p>
-		<p>Explore it by yourself. Enhance your campus life with Buddhism today.</p>
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="border-bottom">About NTU Buddhist Society</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<p>Nanyang Technological University Buddhist Society is a non-sectarian Buddhist society which provides various Dhamma learning experience suitable for NTU community.It envisions propagating the Dhamma and at the same time encouraging spiritual development.</p>
+				<p>Walk the journey together with us to learn the noble knowledge, to practice the wholesome actions, to realize the potential and to share the benefits with all beings.</p>
+				<p>Explore it by yourself. Enhance your campus life with Buddhism today.</p>
+			</div>
+		</div>
 	</div>
 </div>

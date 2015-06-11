@@ -231,7 +231,6 @@ body {
 
 /*
  * Footer tag
- *
  */
 
 footer {
@@ -250,7 +249,6 @@ footer {
 
 /*
  * This part contains the modification of Bootstrap's carousel
- *
  */
 
 #ntubs-slides {
@@ -280,25 +278,24 @@ footer {
 
 /*
  * This part onward contains the CSS for image button in Upcoming Events section found in home.php
- *
  */
 
 /*
 	A clever workaround for :link, :hover, :active, :visited
 	http://stackoverflow.com/questions/3950322/how-to-select-all-a-pseudo-classes-in-css
 */
-body .link-img {
+#ntubs-body .link-img {
 	display: block;
 	color: #000;
 	text-decoration: none;
 }
 
-.link-img > .link-img-holder {
+#ntubs-body .link-img > .link-img-holder {
 	position: relative;
 	margin-bottom: 20px;
 }
 
-.link-img > .link-img-holder > .link-img-popup {
+#ntubs-body .link-img > .link-img-holder > .link-img-popup {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -309,7 +306,7 @@ body .link-img {
 	transition: background-color 0.5s;
 }
 
-.link-img > .link-img-holder > .link-img-popup > button {
+#ntubs-body .link-img > .link-img-holder > .link-img-popup > button {
 	display: none;
 	
 	/*
@@ -322,12 +319,12 @@ body .link-img {
 	background: none;
 }
 
-.link-img > .link-img-holder:hover > .link-img-popup {
+#ntubs-body .link-img > .link-img-holder:hover > .link-img-popup {
 	display: block;
 	background-color: rgba(0, 0, 0, 0.25);
 }
 
-.link-img > .link-img-holder:hover > .link-img-popup > button {
+#ntubs-body .link-img > .link-img-holder:hover > .link-img-popup > button {
 	display: block;
 	box-sizing: border-box;
 
@@ -352,18 +349,18 @@ body .link-img {
 	left: 50%;
 }
 
-.link-img > .link-img-title {
+#ntubs-body .link-img > .link-img-title {
 	padding: 0 5px;
 	margin-bottom: 20px;
 	font-size: 1.5em;
 	text-align: center;
 }
 
-.link-img > .link-img-desc {
+#ntubs-body .link-img > .link-img-desc {
 	padding: 0 5px 5px;
 }
 
-.link-img > .link-img-holder > img {
+#ntubs-body .link-img > .link-img-holder > img {
 	padding: 5px;
 	background-color: #fff;
 	border: none;
@@ -389,7 +386,7 @@ body .link-img {
 #advisor-table {
 	border: 1px solid #000;
 	border-collapse: separate;
-	border-spacing: 1px;
+	border-spacing: 2px;
 }
 
 #advisor-table td:first-child {
@@ -402,7 +399,7 @@ body .link-img {
 }
 
 @media screen and (max-width: 767px) {
-	#event-list > div[class*="col-"] {
+	#event-list-container > div[class*="col-"] {
 		padding-bottom: 75px;
 	}
 }
