@@ -65,26 +65,26 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 				<img id="ntubs-subnav-img" src="img/ntubs.png" class="img-responsive" class="media-object" />
 			</div>
 		</div>
-		<div id="ntubs-subnav-grass" class="row"></div>
+		<div id="ntubs-subnav-grass"></div>
 		<div id="ntubs-subnav-btn-container" class="row">
-			<div id="ntubs-subnav-btn-group" class="col-xs-12">
+			<div class="col-xs-12">
 <?php
 	foreach($sub_btns[$nav_btn] as $key => $sub) {
-		echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">$sub[title]</a>";
+		echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"ntubs-subnav-btn btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">$sub[title]</a>";
 	}
 ?>
-			</div>
-			<div id="ntubs-subnav-dropdown" class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-subnav-dropdown-btn" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
-				</button>
-				<ul id="ntubs-subnav-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="ntubs-subnav-dropdown-btn">
+				<div id="ntubs-subnav-dropdown" class="dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-subnav-dropdown-btn" data-toggle="dropdown">
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
+					</button>
+					<ul id="ntubs-subnav-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="ntubs-subnav-dropdown-btn">
 <?php
 	foreach($sub_btns[$nav_btn] as $key => $sub) {
 		echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">$sub[title]</a></li>";
 	}
 ?>
-				</ul>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

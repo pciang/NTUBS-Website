@@ -142,26 +142,19 @@ body {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	margin: -250px 0 0;
+	margin: -250px 0;
 	padding: 0;
 	height: 285px;
 	background-image: url("../img/grass.png");
-	background-position: center center;
+	background-position: center bottom;
 	background-repeat: repeat-x;
 }
 
-#ntubs-subnav-btn-group-container {
+#ntubs-subnav-btn-container {
 	min-height: 35px;
 }
 
-#ntubs-subnav-btn-group {
-	margin-left: 15px;
-	min-height: 35px;
-	max-height: 50px;
-	line-height: 35px;
-}
-
-#ntubs-subnav-btn-group .btn {
+.ntubs-subnav-btn.btn {
 	font-size: 20px;
 	color: #fff;
 	height: 35px;
@@ -174,7 +167,7 @@ body {
 	vertical-align: top;
 }
 
-#ntubs-subnav-btn-group .btn-selected {
+.ntubs-subnav-btn.btn-selected {
 	height: 50px !important;
 	background: transparent url("../img/triangle.png") no-repeat center bottom;
 }
@@ -202,7 +195,7 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-	#ntubs-subnav-btn-group {
+	.ntubs-subnav-btn {
 		display: none;
 	}
 
@@ -219,8 +212,15 @@ body {
 	#ntubs-subnav-img {
 		display: none;
 	}
+
 	#ntubs-subnav-img-xs {
 		display: block;
+	}
+
+	#ntubs-subnav-grass {
+		margin: -120px 0;
+		height: 155px;
+		background-image: url('../img/thin grass.png');
 	}
 }
 
@@ -370,7 +370,6 @@ footer {
 
 /*
  * This is the end of image button part in the Upcoming Events section in home.php
- *
  */
 
  /*

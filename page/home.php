@@ -57,8 +57,8 @@
 	</div>
 </div>
 <div class="row">
-	<div class="page-header border-bottom">
-		<h2 class="text-center">Upcoming Events</h3>
+	<div class="col-xs-12">
+		<h2 class='border-bottom text-center'>Upcoming Events</h2>
 	</div>
 </div>
 <div id="event-list-container" class="row">
