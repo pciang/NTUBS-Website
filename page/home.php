@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-12">
-		<div id="_slide-ntubs" class="carousel slide" data-ride="carousel">
+		<div id="ntubs-slides" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#_slide-ntubs" data-slide-to="0" class="active"></li>

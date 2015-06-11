@@ -1,12 +1,12 @@
 /*
 	This is required for footer to work
 */
-html{
+html {
 	position: relative;
 	min-height: 100%;
 }
 
-body{
+body {
 	font-family: "Lato", sans-serif;
 	margin-bottom: 36px;
 }
@@ -14,7 +14,7 @@ body{
 /*
 	footer's position is absolute, hence we need a margin
 */
-#_body > .row:last-child {
+#ntubs-body > .row:last-child {
 	margin-bottom: 40px;
 }
 
@@ -40,7 +40,7 @@ body{
 /*
 	Fixed navigation bar
 */
-#_nav-ntubs{
+#ntubs-navbar {
 	min-height: 40px;
 	max-height: 40px;
 	height: 40px;
@@ -52,7 +52,7 @@ body{
 	box-sizing: content-box;
 }
 
-#_nav-ntubs > .container-fluid{
+#ntubs-navbar > .container-fluid {
 	max-width: 1024px;
 	padding: 0 30px;
 }
@@ -60,7 +60,7 @@ body{
 /*
 	Navigation button group
 */
-#_nav-btn-group .btn{
+#ntubs-navbar-btn-group .btn {
 	border-radius: 0;
 	padding: 0 20px;
 	height: 40px;
@@ -77,55 +77,55 @@ body{
 	margin: 0;
 }
 
-#_nav-btn-group .btn:hover {
+#ntubs-navbar-btn-group .btn:hover {
 	background-color: #aaa397;
 }
 
-#logo {
+#ntubs-logo {
 	display: inline-block;
 }
 
 /*
-#_nav-btn-group :last-child{
+#ntubs-navbar-btn-group :last-child{
 	border-right: 2px solid #948a7a !important;
 }
 */
 
-#_nav-btn-group .nav-btn-selected{
+#ntubs-navbar-btn-group .nav-btn-selected {
 	background-color: #948a7a;
 }
 
 /*
 	Navigation dropdown
 */
-#_nav-dropdown{
+#ntubs-navbar-dropdown {
 	display: none;
 }
 
-#_nav-dropdown button{
+#ntubs-navbar-dropdown button {
 	margin: 5px 0;
 	padding: 0 20px;
 	line-height: 30px;
 	height: 30px;
 }
 
-#_nav-dropdown button, #_nav-dropdown a, ul.dropdown-menu, #_sub-dropdown a, #_sub-dropdown button {
+#ntubs-navbar-dropdown button, #ntubs-navbar-dropdown a, ul.dropdown-menu, #ntubs-dropdown-menu a, #ntubs-dropdown-menu button {
 	color: #fff;
 	background: #797062;
 	font-size: 16px;
 }
-#_nav-dropdown button:hover, #_nav-dropdown a:hover, #_sub-dropdown a:hover, #_sub-dropdown button:hover {
+#ntubs-navbar-dropdown button:hover, #ntubs-navbar-dropdown a:hover, #ntubs-dropdown-menu a:hover, #ntubs-dropdown-menu button:hover {
 	color: #fff;
 	background: #aaa397;
 	font-size: 16px;
 }
 
-@media only screen and (max-width: 799px){
-	#_nav-btn-group{
+@media only screen and (max-width: 799px) {
+	#ntubs-navbar-btn-group{
 		display: none;
 	}
 
-	#_nav-dropdown{
+	#ntubs-navbar-dropdown{
 		display: block;
 	}
 }
@@ -133,12 +133,12 @@ body{
 /*
 	Subnavigation part
 */
-#_sub{
+#ntubs-subnav {
 	max-width: 1024px;
 	margin-top: 45px;
 }
 
-#_sub-bg{
+#ntubs-subnav-grass {
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -150,18 +150,18 @@ body{
 	background-repeat: repeat-x;
 }
 
-#_sub-btn-holder{
+#ntubs-subnav-btn-group-container {
 	min-height: 35px;
 }
 
-#_sub-btn-group{
+#ntubs-subnav-btn-group {
 	margin-left: 15px;
 	min-height: 35px;
 	max-height: 50px;
 	line-height: 35px;
 }
 
-#_sub-btn-group .btn{
+#ntubs-subnav-btn-group .btn {
 	font-size: 20px;
 	color: #fff;
 	height: 35px;
@@ -174,20 +174,20 @@ body{
 	vertical-align: top;
 }
 
-#_sub-btn-group .btn-selected{
+#ntubs-subnav-btn-group .btn-selected {
 	height: 50px !important;
 	background: transparent url("../img/triangle.png") no-repeat center bottom;
 }
 
-#_sub-btn-dropdown{
+#ntubs-subnav-dropdown {
 	display: none;
 }
 
-#_sub-btn-dropdown > *{
+#ntubs-subnav-dropdown > * {
 	margin-left: 5px;
 }
 
-#_sub-btn-dropdown > .btn{
+#ntubs-subnav-dropdown > .btn {
 	background: none;
 	color: #fff;
 	padding: 0 12px;
@@ -197,34 +197,34 @@ body{
 	background-color: #797062;
 }
 
-#_sub-btn-dropdown > .btn:hover{
+#ntubs-subnav-dropdown > .btn:hover {
 	background-color: #948a7a;
 }
 
-@media only screen and (max-width: 767px){
-	#_sub-btn-group{
+@media only screen and (max-width: 767px) {
+	#ntubs-subnav-btn-group {
 		display: none;
 	}
 
-	#_sub-btn-dropdown{
+	#ntubs-subnav-dropdown {
 		display: inline-block;
 	}
 }
 
-#_img-ntubs-xs{
+#ntubs-subnav-img-xs{
 	display: none;
 }
 
-@media only screen and (max-width: 450px){
-	#_img-ntubs{
+@media only screen and (max-width: 450px) {
+	#ntubs-subnav-img {
 		display: none;
 	}
-	#_img-ntubs-xs{
+	#ntubs-subnav-img-xs {
 		display: block;
 	}
 }
 
-#_body {
+#ntubs-body {
 	margin-top: 15px;
 	max-width: 1024px;
 }
@@ -253,27 +253,27 @@ footer {
  *
  */
 
-#_slide-ntubs {
+#ntubs-slides {
 	background-color: #fff;
 	margin-bottom: 20px;
 }
 
-#_slide-ntubs div[class*="item"] > img {
+#ntubs-slides div[class*="item"] > img {
 	margin: 0 auto;
 	width: 100%;
 }
 
-#_slide-ntubs > ol {
+#ntubs-slides > ol {
 	bottom: -20px;
 	margin-bottom: 0;
 }
 
-#_slide-ntubs > ol > li {
+#ntubs-slides > ol > li {
 	border-color: #62493D;
 	background-color: #62493D;
 }
 
-#_slide-ntubs > ol > li[class*="active"] {
+#ntubs-slides > ol > li[class*="active"] {
 	border-color: #E09402;
 	background-color: #E09402;
 }
