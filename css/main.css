@@ -212,6 +212,15 @@ body {
 	#ntubs-subnav-img-xs {
 		display: block;
 	}
+
+	#ntubs-grass {
+		background-image: url("../img/thin grass.png");
+		background-position: center bottom;
+	}
+
+	#ntubs-subnav-dropdown {
+		margin-top: 5px;
+	}
 }
 
 #ntubs-body {
