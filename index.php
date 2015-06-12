@@ -30,64 +30,70 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 ?>
 </head>
 <body>
-	<nav id="ntubs-navbar" class="navbar navbar-fixed-top">
+	<nav id="ntubs-nav" class="navbar navbar-fixed-top">
 		<div class="container-fluid">
-			<div class="row col-condensed">
-				<div class="col-xs-3">
-					<a id="ntubs-logo" href="?page=home"><img src="img/navi-logo.png" class="media-object" /></a>
-				</div>
-				<div class="col-xs-9 clearfix">
-					<div id="ntubs-navbar-btn-group" class="btn-group pull-right">
+			<div id="ntubs-navbar" class="row">
+				<div id="ntubs-navbar-content" class="row">
+					<div class="col-xs-12 clearfix">
+						<a id="ntubs-logo" href="?page=home"><img src="img/navi-logo.png" class="media-object" /></a>
+						<div id="ntubs-navbar-btn-group" class="btn-group pull-right">
 <?php
 	foreach ($nav_btns as $key => $page) {
 		echo "<a href=\"?page=$key\" class=\"btn btn-default" . ($key == $nav_btn ? ' nav-btn-selected' : '' ) . "\">$page</a>";
 	}
 ?>
-					</div>
-					<div id="ntubs-navbar-dropdown" class="dropdown pull-right">
-						<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-navbar-dropdown-btn" data-toggle="dropdown"><?php echo $nav_btns[$nav_btn]." "; ?><span class="caret"></span></button>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="ntubs-navbar-dropdown-btn">
+						</div>
+						<div id="ntubs-navbar-dropdown" class="dropdown pull-right">
+							<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-navbar-dropdown-btn" data-toggle="dropdown"><?php echo $nav_btns[$nav_btn]." "; ?><span class="caret"></span></button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="ntubs-navbar-dropdown-btn">
 <?php
 	foreach($nav_btns as $key => $page) {
 		echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$key\">$page</a></li>";
 	}
 ?>
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
-	<div id="ntubs-subnav" class="container-fluid">
-		<div class="row col-condensed">
-			<div class="col-xs-12">
-				<img id="ntubs-subnav-img-xs" src="img/ntubs-xs.png" class="img-responsive" class="media-object" />
-				<img id="ntubs-subnav-img" src="img/ntubs.png" class="img-responsive" class="media-object" />
+	<nav id="ntubs-subnav" class="navbar">
+		<div id="ntubs-grass"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="ntubs-banner" class="row col-condensed">
+					<div class="col-xs-12">
+						<img id="ntubs-subnav-img-xs" src="img/ntubs-xs.png" class="img-responsive media-object" />
+						<img id="ntubs-subnav-img" src="img/ntubs.png" class="img-responsive media-object" />
+					</div>
+				</div>
 			</div>
-		</div>
-		<div id="ntubs-subnav-grass"></div>
-		<div id="ntubs-subnav-btn-container" class="row">
-			<div class="col-xs-12">
+			<div class="row">
+				<div id="ntubs-subnav-btn-container" class="row col-condensed">
+					<div class="col-xs-12">
 <?php
 	foreach($sub_btns[$nav_btn] as $key => $sub) {
 		echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"ntubs-subnav-btn btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">$sub[title]</a>";
 	}
 ?>
-				<div id="ntubs-subnav-dropdown" class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-subnav-dropdown-btn" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-menu-hamburger"></span>
-					</button>
-					<ul id="ntubs-subnav-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="ntubs-subnav-dropdown-btn">
+						<div id="ntubs-subnav-dropdown" class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-subnav-dropdown-btn" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-menu-hamburger"></span>
+							</button>
+							<ul id="ntubs-subnav-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="ntubs-subnav-dropdown-btn">
 <?php
 	foreach($sub_btns[$nav_btn] as $key => $sub) {
 		echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">$sub[title]</a></li>";
 	}
 ?>
-					</ul>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</nav>
 	<div id="ntubs-body" class="container-fluid">
 <?php
 	!empty($path = $sub_btns[$nav_btn][$sub_btn]['path']) ? include_once($path) : $path;

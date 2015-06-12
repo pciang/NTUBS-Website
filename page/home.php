@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row col-condensed">
 	<div class="col-xs-12">
 		<div id="ntubs-slides" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
@@ -102,22 +102,22 @@
 <div class="row">
 	<div class="col-sm-4">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-xs-12">
 				<h3 class="border-bottom">Recent Post</h3>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12">List of recent posts.</div>
+			<div class="col-xs-12">List of recent posts.</div>
 		</div>
 	</div>
 	<div class="col-sm-8">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-xs-12">
 				<h3 class="border-bottom">About NTU Buddhist Society</h3>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-xs-12">
 				<p>Nanyang Technological University Buddhist Society is a non-sectarian Buddhist society which provides various Dhamma learning experience suitable for NTU community.It envisions propagating the Dhamma and at the same time encouraging spiritual development.</p>
 				<p>Walk the journey together with us to learn the noble knowledge, to practice the wholesome actions, to realize the potential and to share the benefits with all beings.</p>
 				<p>Explore it by yourself. Enhance your campus life with Buddhism today.</p>
