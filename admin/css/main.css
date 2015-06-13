@@ -1,0 +1,63 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+#login-banner {
+	position: static;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+
+	max-width: none;
+}
+
+#login-container {
+	position: static;
+	width: 100%;
+
+	max-width: none;
+	
+	border: 1px #ccc solid;
+	border-radius: 20px;
+	padding: 10px;
+
+	/*
+		http://www.cssmatic.com/box-shadow
+	*/
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.67);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.67);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.67);
+}
+
+#login-container label {
+	text-align: right;
+	padding-top: 7px;
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 480px) {
+	#login-container {
+		width: 480px;
+		max-width: 480px;
+		position: absolute;
+		top: calc(50% - 42px);
+		left: calc(50% - 240px);
+
+	}
+
+	#login-banner {
+		position: absolute;
+		top: calc(50% - 160px);
+		left: calc(50% - 240px);
+		max-width: 480px;
+		width: 100%;
+		height: auto;
+	}
+}

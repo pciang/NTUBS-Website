@@ -6,14 +6,14 @@ html {
 	min-height: 100%;
 }
 
+/*
+	footer's position is absolute, hence we need a negative margin
+*/
 body {
 	font-family: "Lato", sans-serif;
 	margin-bottom: 36px;
 }
 
-/*
-	footer's position is absolute, hence we need a margin
-*/
 #ntubs-body > .row:last-child {
 	margin-bottom: 40px;
 }
@@ -420,4 +420,12 @@ footer {
 	#ntubs-subnav {
 		margin-bottom: 20px;
 	}
+
+	#recent-post {
+		margin-bottom: 0;
+	}
+}
+
+#recent-post {
+	margin-bottom: 75px;
 }

@@ -100,7 +100,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-sm-4">
+	<div id="recent-post" class="col-sm-4">
 		<div class="row">
 			<div class="col-xs-12">
 				<h3 class="border-bottom">Recent Post</h3>
