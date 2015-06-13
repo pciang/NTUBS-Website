@@ -26,7 +26,8 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <?php
-	include_once "include/local_font.php";
+
+include_once "include/local_font.php";
 ?>
 </head>
 <body>
@@ -38,18 +39,20 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 						<a id="ntubs-logo" href="?page=home"><img src="img/navi-logo.png" class="media-object" /></a>
 						<div id="ntubs-navbar-btn-group" class="btn-group pull-right">
 <?php
-	foreach ($nav_btns as $key => $page) {
-		echo "<a href=\"?page=$key\" class=\"btn btn-default" . ($key == $nav_btn ? ' nav-btn-selected' : '' ) . "\">$page</a>";
-	}
+
+foreach ($nav_btns as $key => $page) {
+	echo "<a href=\"?page=$key\" class=\"btn btn-default" . ($key == $nav_btn ? ' nav-btn-selected' : '' ) . "\">$page</a>";
+}
 ?>
 						</div>
 						<div id="ntubs-navbar-dropdown" class="dropdown pull-right">
 							<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-navbar-dropdown-btn" data-toggle="dropdown"><?php echo $nav_btns[$nav_btn]." "; ?><span class="caret"></span></button>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="ntubs-navbar-dropdown-btn">
 <?php
-	foreach($nav_btns as $key => $page) {
-		echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$key\">$page</a></li>";
-	}
+
+foreach($nav_btns as $key => $page) {
+	echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$key\">$page</a></li>";
+}
 ?>
 							</ul>
 						</div>
@@ -73,9 +76,10 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 				<div id="ntubs-subnav-btn-container" class="row col-condensed">
 					<div class="col-xs-12">
 <?php
-	foreach($sub_btns[$nav_btn] as $key => $sub) {
-		echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"ntubs-subnav-btn btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">$sub[title]</a>";
-	}
+
+foreach($sub_btns[$nav_btn] as $key => $sub) {
+	echo "<a href=\"?page=$nav_btn&amp;p_id=$key\" class=\"ntubs-subnav-btn btn btn-default" . ($key == $sub_btn ? ' btn-selected' : '') . "\">$sub[title]</a>";
+}
 ?>
 						<div id="ntubs-subnav-dropdown" class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="ntubs-subnav-dropdown-btn" data-toggle="dropdown">
@@ -83,9 +87,10 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 							</button>
 							<ul id="ntubs-subnav-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="ntubs-subnav-dropdown-btn">
 <?php
-	foreach($sub_btns[$nav_btn] as $key => $sub) {
-		echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">$sub[title]</a></li>";
-	}
+
+foreach($sub_btns[$nav_btn] as $key => $sub) {
+	echo "<li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"?page=$nav_btn&amp;p_id=$key\">$sub[title]</a></li>";
+}
 ?>
 							</ul>
 						</div>
@@ -96,7 +101,8 @@ $sub_btn = !empty($_GET['p_id']) ? array_key_exists(intval($_GET['p_id']), $sub_
 	</nav>
 	<div id="ntubs-body" class="container-fluid">
 <?php
-	!empty($path = $sub_btns[$nav_btn][$sub_btn]['path']) ? include_once($path) : $path;
+
+!empty($path = $sub_btns[$nav_btn][$sub_btn]['path']) ? include_once($path) : $path;
 ?>
 	</div>
 	<footer class="container-fluid">&copy; NTU Buddhist Society <?php echo date("Y"); ?></footer>

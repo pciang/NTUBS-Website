@@ -23,7 +23,7 @@ body {
 	width: 100%;
 
 	max-width: none;
-	
+
 	border: 1px #ccc solid;
 	border-radius: 20px;
 	padding: 10px;
@@ -60,4 +60,35 @@ body {
 		width: 100%;
 		height: auto;
 	}
+}
+
+.table-header {
+	border: 1px solid #000;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: -1px;
+
+	color: #fff;
+	background-color: #000;
+	padding: 5px;
+}
+
+.table-header + .row {
+	border: 1px solid #000;
+	border-radius: 0 0 10px 10px;
+
+	margin-bottom: 25px;
+	padding: 5px;
+}
+
+.event-list .btn {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.event-list .event-item {
+	margin-bottom: 10px;
+}
+
+.event-list .event-item:last-child {
+	margin-bottom: 0;
 }
