@@ -10,13 +10,7 @@ if(isset($_SESSION['admin'])) {
 	} else header('Location: login.php');
 } else header('Location: login.php');
 
-$sql_connection = get_simple_sql_connection();
-$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` ORDER BY `datetime` DESC LIMIT 10;');
-$sql_statement -> execute();
-$events = $sql_statement -> get_result();
-$sql_statement -> close();
-
-$sql_connection -> close();
+$page = !empty($_GET['page']) && array_key_exists($_GET['page'], $pages) ? $pages[$_GET['page']] : $pages['home'];
 
 ?>
 
@@ -29,55 +23,45 @@ $sql_connection -> close();
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="row table-header">
-					<div class="col-xs-12">NTUBS | Admin Panel</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-6">
-						<span>Welcome, <?=$admin['full_name']?></span>
-					</div>
-					<div class="col-xs-6 text-right">
-						<a href="logout.php">Logout</a>
-					</div>
-				</div>
-				<div class="row table-header">
-					<div class="col-xs-12">Edit Event</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">Note: Select an event to edit one!</div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="row" id="ntubs-banner">
+				<div class="col-xs-12">
+					<img src="../img/ntubs.png" class="media-object" />
 				</div>
 			</div>
-			<div class="col-md-6 event-list">
-				<div class="row table-header">
-					<div class="col-xs-12">Event List <span style="color: #ccc; font-style: italic; ">(Only at most 10 recent events are listed)</span></div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-<?php
-
-while($row = $events -> fetch_assoc()) {
-?>
-						<div class="row event-item">
-							<div class="col-xs-10"><?=$row['title'] . ($row['is_draft'] ? ' <span style="color: #f00; font-style: italic; ">(draft!)</span>' : '')?></div>
-							<div class="col-xs-2 text-right">
-								<button class="btn btn-default" data-event-id="<?=$row['id']?>">Edit</button>
-							</div>
-						</div>
-<?php
-}
-
-?>
+			<div id="ntubs-navbar" class="row">
+				<div class="col-xs-12">
+					<div id="ntubs-navbar-content" class="row">
+						<div class="col-xs-12 text-right">Welcome, <?=$admin['full_name']?> | <a href="../" target="_blank">Visit Site</a> | [ <a href="logout.php">Logout</a> ]</div>
 					</div>
 				</div>
-				<div class="row table-header">
-					<div class="col-xs-12">New Event</div>
+			</div>
+		</div>
+	</nav>
+	<div id="admin-panel-container" class="container-fluid">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="row table-head">
+					<div class="col-xs-12">
+						Tools
+					</div>
 				</div>
-				<div class="row">
-					<div class="col-xs-12">Body</div>
+				<div class="row table-body">
+					<div class="col-xs-12">
+						<ul>
+							<li>
+								<a href="?page=event">Manage Events</a>
+							</li>
+						</ul>
+					</div>
 				</div>
+			</div>
+			<div class="col-xs-8 col-xs-offset-1">
+<?php
+
+!empty($page['path']) ? include_once($page['path']) : '';
+?>
 			</div>
 		</div>
 	</div>

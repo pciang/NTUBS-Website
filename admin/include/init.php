@@ -33,6 +33,11 @@ function is_set() {
 	return true;
 }
 
+$pages = array(
+	'home' => array('path' => 'page/home.php'),
+	'event' => array('path' => 'page/event.php')
+	);
+
 if(!isset($_SESSION)) session_start();
 
 ?>
