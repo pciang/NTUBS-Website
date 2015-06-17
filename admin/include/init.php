@@ -35,7 +35,11 @@ function is_set() {
 
 $pages = array(
 	'home' => array('path' => 'page/home.php'),
-	'event' => array('path' => 'page/event.php')
+	'event' => array('path' => 'page/event.php'),
+	'create_event' => array(
+		'path' => 'page/create_event.php',
+		'js' => 'js/create_event.js'
+		)
 	);
 
 if(!isset($_SESSION)) session_start();

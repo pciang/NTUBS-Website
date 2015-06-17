@@ -5,8 +5,35 @@ html {
 
 body {
 	height: 100%;
+	margin-bottom: 76px;
 }
 
+footer {
+	display: block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	background-color: #797062;
+	text-align: center;
+	color: #fff;
+}
+
+.col-condensed > [class*="col-"] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+#ntubs-nav {
+	min-width: 1024px;
+}
 
 #login-banner {
 	position: static;
@@ -73,6 +100,13 @@ body {
 	padding-right: 15px;
 }
 
+@media screen and (max-width: 1024px) {
+	#ntubs-banner {
+		margin-left: -15px !important;
+		margin-right: -15px !important;
+	}
+}
+
 #ntubs-banner {
 	width: 1024px;
 	margin: 0 auto;
@@ -121,21 +155,26 @@ body {
 	padding: 5px;
 	border: 1px solid #797062;
 	margin-bottom: 25px;
+	border-radius: 0 0 10px 10px;
 }
 
-.table-body ul {
+.table-body:last-child {
+	margin-bottom: 0;
+}
+
+#ntubs-side-navi {
 	margin: 0;
 	padding-left: 0;
 	list-style-type: none;
 }
 
-.table-body ul li:before {
+#ntubs-side-navi li:before {
 	content: "\25CF";
 }
 
-.table-body ul li a,
-.table-body ul li a:active,
-.table-body ul li a:visited {
+#ntubs-side-navi li a,
+#ntubs-side-navi li a:active,
+#ntubs-side-navi li a:visited {
 	color: #797062;
 }
 
@@ -150,5 +189,30 @@ body {
 #create-event-btn:before {
 	color: #0a0;
 	content: "\2795  ";
+	font-weight: bolder;
 }
 
+.event-title {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.edit-event-btn {
+	padding: 5px;
+}
+
+.event-entry {
+	margin-bottom: 10px;
+}
+
+.event-entry:last-child {
+	margin-bottom: 0;
+}
+
+input[type="file"] {
+	height: auto;
+}
+
+.noresize {
+	resize: none;
+}
