@@ -62,18 +62,27 @@
 	</div>
 </div>
 <div id="event-list-container" class="row">
+<?php
+
+while($event = $events -> fetch_assoc()) {
+?>
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
-				<img class="img-responsive center-block" src="img/event.jpg" />
+				<img class="img-responsive center-block" src="<?=$event['img_path']?>" />
 				<div class="link-img-popup">
 					<button>Read more</button>
 				</div>
 			</div>
-			<div class="link-img-title">NTUBS Dharma Talk: "The Path as a Human"</div>
-			<div class="link-img-desc">NTUBS Dharma Talk: "The Path as a Human"</div>
+			<div class="link-img-title"><?=$event['title']?></div>
+			<div class="link-img-desc"><?=$event['content']?></div>
 		</a>
 	</div>
+<?php
+}
+
+?>
+<!--
 	<div class="col-sm-4">
 		<a class="link-img" href="">
 			<div class="link-img-holder">
@@ -98,6 +107,7 @@
 			<div class="link-img-desc">Hi NTU!</div>
 		</a>
 	</div>
+-->
 </div>
 <div class="row">
 	<div id="recent-post" class="col-sm-4">

@@ -41,9 +41,10 @@ if(!is_array($img_path) || $img_path['error'] != 0 || !in_array($img_path['type'
 }
 
 $file_ext = pathinfo($img_path['name'], PATHINFO_EXTENSION);
-$target_location = "../img/" . date("YmdHis") . ".$file_ext";
+$target_location = 'img/' . date("YmdHis") . ".$file_ext";
+$real_location = "../$target_location"; // relativity issue
 
-if(move_uploaded_file($img_path['tmp_name'], $target_location)) {
+if(move_uploaded_file($img_path['tmp_name'], $real_location)) {
 	$sql_connection = get_simple_sql_connection();
 	$sql_statement = $sql_connection -> prepare('INSERT INTO `event` (`title`, `datetime`, `img_path`, `content`, `is_draft`) VALUES (?, ?, ?, ?, ?);');
 	$sql_statement -> bind_param('ssssi', $title, $datetime, $target_location, $content, $is_draft);

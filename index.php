@@ -10,6 +10,13 @@ $nav_btn = !empty($_GET['page']) && array_key_exists($_GET['page'], $nav_btns) ?
 
 $sub_btn = !empty($_GET['p_id']) && array_key_exists(intval($_GET['p_id']), $sub_btns[$nav_btn]) ? intval($_GET['p_id']) : 0;
 
+$sql_connection = get_simple_sql_connection();
+$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` ORDER BY `datetime` DESC LIMIT 3');
+$sql_statement -> execute();
+$events = $sql_statement -> get_result();
+$sql_statement -> close();
+$sql_connection -> close();
+
 ?><!DOCTYPE html>
 <html>
 <head>

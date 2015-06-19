@@ -21,6 +21,7 @@ if(!empty($_GET['event_id'])) {
 	$sql_statement -> fetch();
 	$sql_statement -> close();
 
+	$old_img_path = "../$old_img_path"; // relativity issue
 	if(file_exists($old_img_path) && is_writable($old_img_path)) {
 		unlink($old_img_path);
 

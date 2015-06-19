@@ -349,14 +349,14 @@ footer {
 }
 
 #ntubs-body .link-img > .link-img-title {
-	padding: 0 5px;
+	/* padding: 0 5px; */
 	margin-bottom: 20px;
 	font-size: 1.5em;
 	text-align: center;
 }
 
 #ntubs-body .link-img > .link-img-desc {
-	padding: 0 5px 5px;
+	/* padding: 0 5px 5px; */
 }
 
 #ntubs-body .link-img > .link-img-holder > img {
