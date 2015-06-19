@@ -182,10 +182,6 @@ footer {
 	text-decoration: underline;
 }
 
-#create-event-btn {
-	padding: 5px;
-}
-
 #create-event-btn:before {
 	color: #0a0;
 	content: "\2795  ";
@@ -195,10 +191,6 @@ footer {
 .event-title {
 	padding-top: 5px;
 	padding-bottom: 5px;
-}
-
-.edit-event-btn {
-	padding: 5px;
 }
 
 .event-entry {

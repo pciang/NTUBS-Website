@@ -24,7 +24,7 @@ if(!is_empty($_POST, 'uid', 'pw')) {
 			'last_activity' => time()
 		);
 		session_write_close();
-		header('Location: index.php');
+		simple_redirect('.');
 	}
 }
 
@@ -32,7 +32,7 @@ if(isset($_SESSION['admin'])) {
 	$admin = $_SESSION['admin'];
 	if(is_array($admin) && !is_empty($admin, 'user_id', 'password', 'full_name', 'last_activity')) {
 		// Lazy checking, assuming no one would like to crack NTUBS
-		header('Location: index.php');
+		simple_redirect('.');
 	} else {
 		unset($_SESSION['admin']);
 		session_write_close();

@@ -7,8 +7,8 @@ if(isset($_SESSION['admin'])) {
 	if(is_array($admin) && !is_empty($admin, 'user_id', 'password', 'full_name', 'last_activity')) {
 		// Lazy checking
 		// uh...
-	} else header('Location: login.php');
-} else header('Location: login.php');
+	} else simple_redirect('login.php');
+} else simple_redirect('login.php');
 
 $page = !empty($_GET['page']) && array_key_exists($_GET['page'], $pages) ? $_GET['page'] : 'home';
 
@@ -24,6 +24,30 @@ switch($page) {
 		$sql_connection -> close();
 		break;
 	case 'create_event':
+		if(isset($_SESSION['create_event_autosave'])) {
+			$create_event_autosave = $_SESSION['create_event_autosave'];
+			unset($_SESSION['create_event_autosave']);
+		}
+		break;
+	case 'edit_event':
+		// There is something wrong with either date format or image size,
+		// admin will not lose all changes :)
+		if(isset($_SESSION['edit_event_autosave'])) {
+			$event = $_SESSION['edit_event_autosave'];
+			unset($_SESSION['edit_event_autosave']);
+		// Nope, no edit yet
+		} else {
+			if(empty($_GET['event_id'])) simple_redirect('.');
+			$sql_connection = get_simple_sql_connection();
+			$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` WHERE id=? LIMIT 1');
+			$sql_statement -> bind_param('i', $_GET['event_id']);
+			$sql_statement -> execute();
+			$sql_result = $sql_statement -> get_result();
+			$sql_statement -> close();
+			$sql_connection -> close();
+			if($sql_result -> num_rows == 0) simple_redirect('.');
+			$event = $sql_result -> fetch_assoc();
+		}
 		break;
 }
 

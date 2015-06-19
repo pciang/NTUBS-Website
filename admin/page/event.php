@@ -5,7 +5,7 @@
 	<div class="col-xs-12">
 		<div class="row" style="margin-bottom: 10px; ">
 			<div class="col-xs-12">
-				<a class="btn btn-default" id="create-event-btn" href="?page=create_event">Create an Event</a>
+				<a class="btn btn-default" href="?page=create_event"><span class="glypicon glyphicon-plus"></span> Create an Event</a>
 			</div>
 		</div>
 		<div class="row">
@@ -24,7 +24,8 @@ while($event = $events -> fetch_assoc()) {
 						<div class="row event-entry">
 							<div class="col-xs-9 event-title"><?= $event['title'] . ($event['is_draft'] == 1 ? ' <span style="font-style: italic; color: #f00; ">(draft)</span>' : '') ?></div>
 							<div class="col-xs-3 text-right">
-								<a href='?<?="page=edit_event&event_id=$event[id]"?>' class="btn btn-default edit-event-btn">Edit Event</a>
+								<a href="delete_event.php?event_id=<?=$event['id']?>" class="btn btn-default btn-sm glyphicon glyphicon-trash"></a>
+								<a href='?<?="page=edit_event&event_id=$event[id]"?>' class="btn btn-default btn-sm">Edit Event</a>
 							</div>
 						</div>
 <?php

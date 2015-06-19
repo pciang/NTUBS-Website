@@ -33,13 +33,23 @@ function is_set() {
 	return true;
 }
 
+function validate_datetime($date){
+    $d = DateTime::createFromFormat('Y-m-d H:i:s', $date);
+    return $d && $d -> format('Y-m-d H:i:s') == $date;
+}
+
+function simple_redirect($url) {
+	if(is_string($url)) {
+		header("Location: $url");
+		die;
+	} // else nothing
+}
+
 $pages = array(
 	'home' => array('path' => 'page/home.php'),
 	'event' => array('path' => 'page/event.php'),
-	'create_event' => array(
-		'path' => 'page/create_event.php',
-		'js' => 'js/create_event.js'
-		)
+	'create_event' => array('path' => 'page/create_event.php'),
+	'edit_event' => array('path' => 'page/edit_event.php')
 	);
 
 if(!isset($_SESSION)) session_start();
