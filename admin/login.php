@@ -9,14 +9,18 @@ if(!is_empty($_POST, 'uid', 'pw')) {
 	$sql_statement = $sql_connection -> prepare('SELECT * FROM `admin` WHERE user_id=? AND password=? LIMIT 1;');
 	$sql_statement -> bind_param('ss', $uid, $pw);
 	$sql_statement -> execute();
-	$sql_result = $sql_statement -> get_result();
-	$sql_statement -> close();
-	$sql_connection -> close();
+	$sql_statement -> store_result();
+	// $sql_result = $sql_statement -> get_result();
+	// $sql_statement -> close();
+	// $sql_connection -> close();
+	$row = array();
+	$sql_statement -> bind_result($row['user_id'], $row['full_name'], $row['password'], $row['last_activity']);
 
 	// $failed_login_attempt is not used yet
-	if($sql_result -> num_rows == 0) $failed_login_attempt = 1;
+	if($sql_statement -> num_rows == 0) $failed_login_attempt = 1;
 	else {
-		$row = $sql_result -> fetch_assoc();
+		// $row = $sql_result -> fetch_assoc();
+		$sql_statement -> fetch();
 		$_SESSION['admin'] = array(
 			'user_id' => $row['user_id'],
 			'password' => $row['password'],

@@ -19,7 +19,8 @@
 					<div class="col-xs-12">
 <?php
 
-while($event = $events -> fetch_assoc()) {
+// while($event = $events -> fetch_assoc()) {
+while($sql_statement -> fetch()) {
 ?>
 						<div class="row event-entry">
 							<div class="col-xs-9 event-title"><?= $event['title'] . ($event['is_draft'] == 1 ? ' <span style="font-style: italic; color: #f00; ">(draft)</span>' : '') ?></div>

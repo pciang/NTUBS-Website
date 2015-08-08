@@ -64,10 +64,11 @@
 <div id="event-list-container" class="row">
 <?php
 
-while($event = $events -> fetch_assoc()) {
+// while($event = $events -> fetch_assoc()) {
+while($sql_statement -> fetch()) {
 ?>
 	<div class="col-sm-4">
-		<a class="link-img" href="">
+		<a class="link-img" href="?page=event&amp;event_id=<?=$event['id']?>">
 			<div class="link-img-holder">
 				<img class="img-responsive center-block" src="<?=$event['img_path']?>" />
 				<div class="link-img-popup">

@@ -19,9 +19,11 @@ switch($page) {
 		$sql_connection = get_simple_sql_connection();
 		$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` ORDER BY `datetime` DESC LIMIT 10');
 		$sql_statement -> execute();
-		$events = $sql_statement -> get_result();
-		$sql_statement -> close();
-		$sql_connection -> close();
+		$event = array();
+		// $events = $sql_statement -> get_result();
+		$sql_statement -> bind_result($event['id'], $event['datetime'], $event['img_path'], $event['content'], $event['is_draft'], $event['title'], $event['location'], $event['datetime_end']);
+		// $sql_statement -> close();
+		// $sql_connection -> close();
 		break;
 	case 'create_event':
 		if(isset($_SESSION['create_event_autosave'])) {
@@ -42,11 +44,15 @@ switch($page) {
 			$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` WHERE id=? LIMIT 1');
 			$sql_statement -> bind_param('i', $_GET['event_id']);
 			$sql_statement -> execute();
-			$sql_result = $sql_statement -> get_result();
-			$sql_statement -> close();
-			$sql_connection -> close();
-			if($sql_result -> num_rows == 0) simple_redirect('.');
-			$event = $sql_result -> fetch_assoc();
+			$sql_statement -> store_result();
+			$event = array();
+			// $sql_result = $sql_statement -> get_result();
+			$sql_statement -> bind_result($event['id'], $event['datetime'], $event['img_path'], $event['content'], $event['is_draft'], $event['title'], $event['location'], $event['datetime_end']);
+			// $sql_statement -> close();
+			// $sql_connection -> close();
+			if($sql_statement -> num_rows == 0) simple_redirect('.');
+			// $event = $sql_result -> fetch_assoc();
+			$sql_statement -> fetch();
 		}
 		break;
 }
@@ -105,6 +111,8 @@ if(!empty($js_path)) echo "<script type=\"text/javascript\" src=\"$js_path\"></s
 <?php
 
 !empty($pages[$page]['path']) ? include_once($pages[$page]['path']) : '';
+if(isset($sql_statement)) $sql_statement -> close();
+if(isset($sql_connection)) $sql_connection -> close();
 ?>
 			</div>
 		</div>

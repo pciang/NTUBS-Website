@@ -10,12 +10,48 @@ $nav_btn = !empty($_GET['page']) && array_key_exists($_GET['page'], $nav_btns) ?
 
 $sub_btn = !empty($_GET['p_id']) && array_key_exists(intval($_GET['p_id']), $sub_btns[$nav_btn]) ? intval($_GET['p_id']) : 0;
 
-$sql_connection = get_simple_sql_connection();
-$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` ORDER BY `datetime` DESC LIMIT 3');
-$sql_statement -> execute();
-$events = $sql_statement -> get_result();
-$sql_statement -> close();
-$sql_connection -> close();
+switch($nav_btn) {
+	case 'home':
+		$sql_connection = get_simple_sql_connection();
+		$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` ORDER BY `datetime` DESC LIMIT 3');
+		$sql_statement -> execute();
+		$event = array();
+		// $events = $sql_statement -> get_result();
+		$sql_statement -> bind_result($event['id'], $event['datetime'], $event['img_path'], $event['content'], $event['is_draft'], $event['title'], $event['location'], $event['datetime_end']);
+		// $sql_statement -> close();
+		// $sql_connection -> close();
+		break;
+	case 'event':
+		if(empty($_GET['event_id'])) {
+			$sql_connection = get_simple_sql_connection();
+			$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` WHERE is_draft=0 ORDER BY `datetime` DESC LIMIT 3');
+			$sql_statement -> execute();
+			$event = array();
+			// $events = $sql_statement -> get_result();
+			$sql_statement -> bind_result($event['id'], $event['datetime'], $event['img_path'], $event['content'], $event['is_draft'], $event['title'], $event['location'], $event['datetime_end']);
+			// $sql_statement -> close();
+			// $sql_connection -> close();
+		} else {
+			$id = intval($_GET['event_id']);
+			$sql_connection = get_simple_sql_connection();
+			$sql_statement = $sql_connection -> prepare('SELECT * FROM `event` WHERE id=? AND is_draft=0');
+			$sql_statement -> bind_param('i', $id);
+			$sql_statement -> execute();
+			$sql_statement -> store_result();
+			$event = array();
+			// $events = $sql_statement -> get_result();
+			$sql_statement -> bind_result($event['id'], $event['datetime'], $event['img_path'], $event['content'], $event['is_draft'], $event['title'], $event['location'], $event['datetime_end']);
+			// $sql_statement -> close();
+			// $sql_connection -> close();
+			// if($events -> num_rows == 0) simple_redirect('.?page=event');
+			if($sql_statement -> num_rows == 0) {
+				$sql_statement -> close();
+				$sql_connection -> close();
+				simple_redirect('?page=event');
+			}
+		}
+		break;
+}
 
 ?><!DOCTYPE html>
 <html>
@@ -32,6 +68,7 @@ $sql_connection -> close();
 	<link rel="shortcut icon" href="img/buddhist.ico" />
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 <?php
 
 include_once "include/local_font.php";
@@ -110,6 +147,9 @@ foreach($sub_btns[$nav_btn] as $key => $sub) {
 <?php
 
 !empty($path = $sub_btns[$nav_btn][$sub_btn]['path']) ? include_once($path) : '';
+
+if(isset($sql_statement)) $sql_statement -> close();
+if(isset($sql_connection)) $sql_connection -> close();
 ?>
 	</div>
 	<footer class="container-fluid">&copy; NTU Buddhist Society <?php echo date("Y"); ?></footer>

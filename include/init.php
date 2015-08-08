@@ -60,7 +60,7 @@ $nav_btns = array(
 	'library'	=> 'Library',
 	'camp'		=> 'Camps',
 	'contact'	=> 'Contact Us'
-	);
+);
 
 /**
  * Subnavigation buttons, shown on every page
@@ -69,31 +69,31 @@ $nav_btns = array(
 $sub_btns = array(
 	'home' => array(
 		array('title' => 'Latest Updates', 'path' => 'page/home.php')
-		),
+	),
 	'society' => array(
 		array('title' => 'About Us', 'path' => 'page/about.php'),
 		array('title' => 'Our History', 'path' => 'page/history.php'),
 		array('title' => 'Advisor and Patron', 'path' => 'page/advisor.php'),
-		array('title' => 'Committees', 'path' => '')
-		),
+		array('title' => 'Committees', 'path' => 'page/committee.php')
+	),
 	'event' => array(
-		array('title' => 'Upcoming Events', 'path' => ''),
+		array('title' => 'Upcoming Events', 'path' => 'page/event.php'),
 		array('title' => 'Featured Posts', 'path' => '')
-		),
+	),
 	'library' => array(
 		array('title' => 'Browse', 'path' => ''),
 		array('title' => 'Terms and Conditions', 'path' => '')
-		),
+	),
 	'camp' => array(
 		array('title' => 'Camp Nirvana Singapore', 'path' => ''),
 		array('title' => 'Dharma Camp', 'path' => '')
-		),
+	),
 	'contact' => array(
 		array('title' => 'Email Us', 'path' => ''),
 		array('title' => 'Member Registration', 'path' => ''),
 		array('title' => 'Sponsorship', 'path' => '')
-		)
-	);
+	)
+);
 
 if(!isset($_SESSION)) session_start();
 
