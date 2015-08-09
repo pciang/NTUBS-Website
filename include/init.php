@@ -89,7 +89,7 @@ $sub_btns = array(
 		array('title' => 'Dharma Camp', 'path' => '')
 	),
 	'contact' => array(
-		array('title' => 'Email Us', 'path' => ''),
+		array('title' => 'Email Us', 'path' => 'page/contact.php'),
 		array('title' => 'Member Registration', 'path' => ''),
 		array('title' => 'Sponsorship', 'path' => '')
 	)

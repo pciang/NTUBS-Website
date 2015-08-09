@@ -433,3 +433,12 @@ footer {
 #recent-post {
 	margin-bottom: 75px;
 }
+
+#contact-form .input-box,
+#contact-form .textarea-box {
+	margin-bottom: 20px;
+}
+
+#contact-form .textarea-box {
+	height: calc(10em * 1.42857);
+}
